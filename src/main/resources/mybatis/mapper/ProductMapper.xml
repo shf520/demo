@@ -1,0 +1,16 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.ProductDao">
+
+    <resultMap type="com.example.demo.entity.Product" id="product">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="price" property="price" jdbcType="VARCHAR"/>
+        <result column="creationdate" property="creationdate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="getProduct" resultType="com.example.demo.entity.Product">
+        select id,name,price,creationdate from product
+    </select>
+
+</mapper>
